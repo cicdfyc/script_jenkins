@@ -1,0 +1,22 @@
+pipeline {
+   agent any
+
+   stages {
+      stage('Build') {
+        steps {
+          echo 'Buil en cours...'
+          echo "Running ${env.BUILD_ID} ${env.BUILD_DISPLAY_NAME} sur ${env.NODE_NAME} et sur le JOB ${env.JOB_NAME}"
+        }
+   }
+   stage('Test') {
+     steps {
+        echo 'Test en cours ...'
+     }
+   }
+   stage('Deploy') {
+     steps {
+       echo 'Deploiement en cours...'
+     }
+   }
+  }
+}
